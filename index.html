@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+    <title>Project</title>
+</head>
+<body>
+    
+  
+
+  <div class="row">
+    <div class="git_hub_btn_fix">
+      <a href="https://github.com/Alex0cristall?tab=repositories" target="_blank">
+        <img src="imges/icons8-github-color/icons8-github-48.png" alt="connec">
+      </a>
+    </div>
+  </div>
+  
+
+  <header class="test d-flex d-flex align-items-center">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="">
+          <h1 class="header_text mb-5">
+            Создание графиков-функций
+          </h1>
+
+          <div class="wrapper">
+            <span class="help_header_text text">#школьный проект, пред 
+                  <span class="footer_importen_text">alfa</span>
+                                                    версия
+            </span>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+
+
+  <div class="about_project_block">
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col-12 text-center mt-3 mb-5">
+          <h2>Визиализация делает <span class="footer_importen_text">Math</span> проще</h2>
+        </div>
+
+        <div class="col text-center mt-5" data-aos="fade-right">
+          <img src="https://ru.symbolab.com/public/images/graphing.webp" alt="connect" class="homepage-first-images">
+          <div class="page_about_gifk mt-3">
+            <h5>Графика</h5>
+            <p class="help_header_text">Построение и анализ функций</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 d-flex justify-content-center">
+
+        <!-- <div class="col-1 col-md-12"></div> -->
+        <div class="col-12  col-sm-12	col-md-10	col-lg-8	col-xl-8
+         p-5 m-5 card_with_text_about">
+
+          <h1 class="mb-4">О сайте</h1>
+          <p  class="text_about" data-aos="fade-in">
+            Чтобы быть эффективным веб-разработчиком — неважно, backend, frontend, fullstack — мало знать только синтаксис выбранного языка программирования, например, Python или JavaScript. Для уверенной разработки веб-систем нужно иметь понимание и реальные навыки по всем технологическим блокам, работающим на разных слоях приложения.
+            <br>
+            <br>
+            Этих слоёв немало — это сам Интернет с его архитектурой и протоколами, это и серверные операционные системы Linux, и бэкенд-стек технологий, включающий в себя выбранный язык программирования, фреймворки, базы данных, системы планирования выполнения и прочее, это и целый спектр фронтенд-технологий.
+
+            Вне зависимости от того, работаешь ты бэкенд или фронтенд разработчиком, только фундаментальное понимание всех слоёв системы позволяет тебе быть эффективным, уверенным в своих силах специалистом, способным к красивому и эффективному решению задач веб-разработки.
+            <br>
+            <br>
+            Плюс — передовые методики разработки ПО. Асинхронные решения, автотесты, информационная безопасть, CI/CD.
+
+            Цель этого курса — дать тебе все необходимые навыки и закрепить их на
+          </p>
+        </div>
+        <!-- <div class="col-1 col-md-12"></div> -->
+      </div>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript\index.js"></script>
+
+    
+  </div>
+
+
+  
+
+
+
+  <main>
+    <div class="container" style="padding-top: 150px; padding-bottom: 200px;">
+      <div class="row">
+
+        <div class="col">
+          <div style="background-color: white;">
+            <canvas id="canv" width=600 height=400>
+                Ваш браузер не поддерживает Canvas
+            </canvas>
+          </div>
+          
+          <div class="my-5">
+            <label for="">Функция:</label>
+            <input style="width: 70%" value="sin(x)" id="func" type="text" class="form-control" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="mb-5">
+            <input type="button" class="btn btn-outline-success" value="Нарисовать график" id="" onclick="draw_grath();">
+            <input type="button" class="btn btn-outline-danger" value="Стереть всё" id="" onclick="clear_canv();">
+          </div>
+
+        </div>
+
+        <!-- <div class="col-12"></div> -->
+
+        <div class="col">
+          <div>
+            <fieldset>
+
+                <legend class="title_edit mb-4"><h4>Параметры:</h4></legend>
+    
+
+                <div>
+                  <span class="hdr paremeter_help_text">Граница по X:</span>
+                </div>
+
+                <div class="input-group my-3">
+                  <div class="input-group-prepend">
+                    <span style="width: 70px" class="input-group-text" id="basic-addon1">x  left</span>
+                  </div>
+                  <input id="x_left" value="-10" type="text" class="form-control" placeholder="-10" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">x right</span>
+                  </div>
+                  <input id="x_right" value="10" type="text" class="form-control" placeholder="-10" aria-describedby="basic-addon1">
+                </div>
+
+
+
+                <div class="mt-4 mb-2">
+                  <span class="hdr paremeter_help_text">Определение значения функции:</span>
+                </div>
+                <div class="mb-3">
+                  <input type="button" class="btn btn-outline-info" value="Вычислить пределы" onclick="calc_minmax();">
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">func min:</span>
+                  </div>
+                  <input id="func_min" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">func max:</span>
+                  </div>
+                  <input id="func_max"  type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+
+
+                <div class="mb-3 mt-4">
+                  <span class="hdr paremeter_help_text">Граница по Y:</span>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">y down</span>
+                  </div>
+                  <input id="y_down" value="-10" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span style="width: 78px;" class="input-group-text" id="basic-addon1">y up</span>
+                  </div>
+                  <input id="y_up" value="10" type="text" class="form-control" aria-describedby="basic-addon1">
+                </div>
+    
+
+
+                <div class="mb-3 mt-4">
+                  <span class="hdr paremeter_help_text">Цвет графика:</span>
+                </div>
+
+                <div>
+                  <select onchange="set_color();" id="pencolor" class="form-select" aria-label="Default select example">
+                      <option value="red">Красный</option>
+                      <option value="green">Зелёный</option>
+                      <option value="blue" selected>Синий</option>
+                      <option value="brown">Коричневый</option>
+                  </select>
+                </div>
+
+
+
+                <!-- <input type="button" class="btn btn-outline-success" value="Нарисовать график" id="" onclick="draw_grath();">
+                <input type="button" class="btn btn-outline-danger" value="Стереть всё" id="" onclick="clear_canv();"> -->
+    
+            </fieldset>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  <script src="javascript\grath.js"></script>
+  </main>
+  
+
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+
+        <div class="col">
+          <span>© 2023 <span class="footer_importen_text">#stebystep!</span></span><br>
+          <span>@AdamFrG.tg</span>
+        </div>
+
+        <div class="col text-center">
+          
+          <a href="#" class="img_link_social">
+            <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm17.9-67.374c3.838.346 6 2.695 6.474 6.438.332 2.612.626 6.352.626 10.375 0 7.064-.626 11.148-.626 11.148-.588 3.728-2.39 5.752-6.18 6.18-4.235.48-13.76.7-17.992.7-4.38 0-13.237-.184-17.66-.552-3.8-.317-6.394-2.44-6.916-6.218-.38-2.752-.626-6.022-.626-11.222 0-5.788.209-8.238.7-10.853.699-3.732 2.48-5.54 6.548-5.96C36.516 32.221 40.55 32 49.577 32c4.413 0 13.927.228 18.322.626Zm-23.216 9.761v14.374L58.37 49.5l-13.686-7.114Z" fill="#ffffff"></path></svg>
+          </a>
+
+          <a href="#" class="img_link_social">
+            <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z" fill="#ffffff"></path></svg>
+          </a>
+
+          <a href="#" class="img_link_social">
+            <svg class="t-sociallinks__svg" role="presentation" width="30px" height="30px" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z" fill="#ffffff"></path></svg>
+          </a>
+ 
+        </div>
+
+        <div class="col scrol_top_position">
+          <a href="#" title="scroll to top icons">
+            <img src="imges/scroll-to-top.png" height="50px" alt="connect">
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
